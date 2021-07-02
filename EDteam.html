@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="theme-color" content="#2E71FF">
+   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <title>Grid with html and css  </title>
+  </head>
+  <style>
+    
+    *{
+      padding:0;
+      margin:0;
+    }
+    
+    /*Empezamos con nuestro contenedor principal**/
+    
+    .All_content{
+      
+      position:absolute;
+      width:100%;
+      height:100%;
+      display:grid;
+      background:#4C4C6E;
+      color:white;
+      font-size:25px;
+      
+      
+      /*Realizamos columnas de  4 filas */
+       
+       grid-template-columns:repeat(5,1fr);
+      
+       grid-template-rows:repeat(7,auto);
+      
+      grid-gap:8px;
+      
+      /*Inicializaremos Areas con Grid*/
+      
+grid-template-areas:"titulo titulo titulo titulo titulo"
+"barra box_5 box_5  box_3 box_3"
+"barra box_5 box_5  box_3 box_3"
+"barra box_5 box_5  box_3 box_3"
+"barra box_5 box_5  box_2 box_1"
+"barra box_5 box_5  box_2 box_1"
+"barra box_5 box_5  box_2 box_1"
+"barra box_5 box_5  box_2 box_1"
+"barra box_5 box_5 box_2  box_4"
+"barra box_5 box_5 box_2  box_4"
+"barra box_5 box_5 box_2  box_4"
+"barra box_5 box_5 box_2  box_4";
+   
+    }
+    
+    .titulo_Inicial{
+      
+   
+      /**lo nombramos para llamarlo en el content*/
+      
+      grid-area:titulo;
+      background:#867AEA;
+    
+      
+    }
+    .barra_Texto_hori{
+      
+      grid-area:barra;
+      background: #D83955;
+    }
+    .box_1{
+      
+      background:#FFC073;
+      grid-area:box_1;
+      
+    }
+    .box_2{
+      
+      background:#FFC073;
+      grid-area:box_2;
+      
+    }
+    .box_3{
+      background:#FFC073;
+      grid-area:box_3;
+    }
+    .box_4{
+      background:#FFC073;
+      grid-area:box_4;
+    }
+    .box_5{
+      background:#FFC073;
+      grid-area:box_5;
+    }
+    
+    .c{
+      text-align:center;
+      align-items:center;
+      display:flex;
+      justify-content:center;
+      
+    }
+    
+    @media screen and ( max-width:768px ){
+      
+      .All_content{
+   
+  
+grid-template-areas:"titulo titulo titulo titulo titulo"
+"barra barra box_5  box_5 box_5"
+"barra barra box_5  box_5 box_5"
+"barra barra box_5  box_5 box_5"
+"barra barra box_5  box_5 box_5"
+"barra barra box_3  box_3 box_3"
+"barra barra box_3  box_3 box_3"
+"barra barra box_3  box_3 box_3"
+"box_2 box_2 box_2 box_2 box_2 "
+"box_2 box_2 box_2 box_2 box_2 "
+"box_2 box_2 box_2 box_2 box_2 "
+"box_1 box_1 box_1 box_4  box_4"
+"box_1 box_1 box_1 box_4  box_4"
+"box_1 box_1 box_1 box_4  box_4";
+    
+  
+    
+      }
+      
+      
+      
+    }
+    
+  </style>
+  <body>
+  <!--Con esto empezare mi grid , para capturar todos los elementos que esten dentro  -->
+  <div class="All_content">
+    
+  
+  <!-- TITULO QUE APARECE EN LA PARTE SUPERIOR -->
+  <div class="titulo_Inicial c"> Titulo</div>
+  <!--------------------------->
+  
+  
+  <div class="barra_Texto_hori c ">Texto</div>
+  
+  <!-- Son todas las cajas que aparecen en el contenido enumerado-->
+  
+  <div class="box_1 c">1</div>
+  <div class="box_2 c">2</div>
+  <div class="box_3 c ">3</div>
+  <div class="box_4 c ">4</div>
+  <div class="box_5 c ">5</div>
+  
+  <!-------------------------->
+  
+  </div>
+  
+  </body>
+</html>
